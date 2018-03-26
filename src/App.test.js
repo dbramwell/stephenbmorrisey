@@ -9,8 +9,8 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('contains Navbar when created', () => {
-  const app = mount(<App />);
-  const navbar = app.find('Navbar');
-  expect(navbar.length).toEqual(1);
+it('contains Menu when created', () => {
+  const app = shallow(<App />);
+  const menu = app.find('Menu');
+  expect(menu.length).toEqual(1);
 });
