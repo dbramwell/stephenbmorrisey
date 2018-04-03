@@ -26,3 +26,67 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+div.page {
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-direction: column;
+  width: 100%;
+}
+
+.series-links-container {
+  width: 100%;
+  flex: 80%;
+  height: 80%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.series-link {
+  width: 28%;
+  margin-left: 4%;
+  background-size: contain;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.series-link:nth-child(1) {
+  background-image: url("./resources/russian_thrillers_background.jpeg"); /* fallback */
+  background-image: linear-gradient(135deg, rgba(0,0,0,0), #EEEEFF 40%), url("./resources/russian_thrillers_background.jpeg"); /* W3C */
+}
+
+.series-link:nth-child(2){
+  background-image: url("./resources/black_eagle_background.jpeg"); /* fallback */
+  background-image: linear-gradient(135deg, rgba(0,0,0,0), #FFEEEE 40%), url("./resources/black_eagle_background.jpeg"); /* W3C */
+}
+
+.series-link:nth-child(3) {
+  background-image: url("./resources/russian_tales_background.jpeg"); /* fallback */
+  background-image: linear-gradient(135deg, rgba(0,0,0,0), #EEFFEE 40%), url("./resources/russian_tales_background.jpeg"); /* W3C */
+}
+
+.series-link h2 {
+  margin: 0px
+}
+
+.series-link div {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.main-header {
+  height: 100px;
+}

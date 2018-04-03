@@ -17,7 +17,7 @@ it('contains Navbar when created', () => {
 
 it('Navbar text is equal to "Stephen B. Morrisey"', () => {
   const menu = mount(<Menu />);
-  const header = menu.find('.navbar-header');
+  const header = menu.find('.navbar-brand');
   expect(header.text()).toBe('Stephen B. Morrisey');
 });
 
@@ -28,7 +28,6 @@ it('Initial hash is home', () => {
 
 it('Can add navItems with navItems prop', () => {
   const menu = mount(<Menu navItems={['item1']}/>);
-  const item1 = menu.find('nav a')
-  expect(item1.length).toBe(1);
+  const item1 = menu.find('nav a').at(1);
   expect(item1.text()).toBe('item1');
 });

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import Helpers from '../Helpers';
 
 export default class Menu extends Component {
 
@@ -8,6 +9,8 @@ export default class Menu extends Component {
     this.state = {
       hash: '#home'
     }
+    this.helpers = new Helpers();
+    
   }
 
   componentDidMount() {
@@ -21,17 +24,18 @@ export default class Menu extends Component {
         <Navbar inverse collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
-              Stephen B. Morrisey
+              <a href='#home'>Stephen B. Morrisey</a>
             </Navbar.Brand>
+            <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              {this.props.navItems.map((item, index) => {
-                return <NavItem active={this.state.hash.indexOf(item) > -1} key={index} onSelect={() => window.location.hash = `#${item}`}>{item}</NavItem>
+              {this.props.navItems.map((header, index) => {
+                const hash = this.helpers.headerToHash(header);
+                return <NavItem active={this.state.hash.indexOf(hash) > -1} key={index} onSelect={() => window.location.hash = `#${hash}`}>{header}</NavItem>
               })}
             </Nav>
           </Navbar.Collapse>
-          <Navbar.Toggle />
         </Navbar>
       </div>
     );
