@@ -28,3 +28,9 @@ it('onClick sets the hash to the result of headerToHash', () => {
   expect(window.location.hash).toBe('#my-header');
 });
 
+it('p matches description prop', () => {
+  const seriesLink = shallow(<SeriesLink header='my-header' description={<p>this is some stuff</p>}/>);
+  const p = seriesLink.find('p').first();
+  expect(p.text()).toBe('this is some stuff');
+});
+

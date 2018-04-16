@@ -19,6 +19,7 @@ export default class SeriesLink extends Component {
       <ScrollAnimation animateIn={this.props.animation} animateOnce={true} className='series-link'>
         <div onClick={this.onClick}>
           <h2>{this.props.header}</h2>
+          {this.props.description}
         </div>
       </ScrollAnimation>
     )

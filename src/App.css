@@ -1,5 +1,28 @@
 .App {
   text-align: center;
+  padding-top: 50px;
+  height: 100vh;
+}
+
+.app-content {
+  overflow-x: hidden;
+  position: fixed;
+  top: 50px;
+  bottom: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
 .App-logo {
@@ -27,10 +50,18 @@
   to { transform: rotate(360deg); }
 }
 
+h1, h2 {
+  text-shadow: 0 0 3px #FFFFFF, 0 0 5px #000000;
+}
+
+p {
+  text-shadow: 0 0 1px #FFFFFF
+}
+
 div.page {
-  min-height: 100vh;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  min-height: 100%;
+  padding-top: 10px;
+  padding-bottom: 50px;
   align-items: center;
   display: -webkit-box;
   display: -moz-box;
@@ -60,33 +91,49 @@ div.page {
   background-size: contain;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .series-link:nth-child(1) {
   background-image: url("./resources/russian_thrillers_background.jpeg"); /* fallback */
-  background-image: linear-gradient(135deg, rgba(0,0,0,0), #EEEEFF 40%), url("./resources/russian_thrillers_background.jpeg"); /* W3C */
+  background-image: linear-gradient(135deg, rgba(0,0,0,0), #CCCCFF 60%), url("./resources/russian_thrillers_background.jpeg"); /* W3C */
 }
 
 .series-link:nth-child(2){
   background-image: url("./resources/black_eagle_background.jpeg"); /* fallback */
-  background-image: linear-gradient(135deg, rgba(0,0,0,0), #FFEEEE 40%), url("./resources/black_eagle_background.jpeg"); /* W3C */
+  background-image: linear-gradient(135deg, rgba(0,0,0,0), #FFCCCC 60%), url("./resources/black_eagle_background.jpeg"); /* W3C */
 }
 
 .series-link:nth-child(3) {
   background-image: url("./resources/russian_tales_background.jpeg"); /* fallback */
-  background-image: linear-gradient(135deg, rgba(0,0,0,0), #EEFFEE 40%), url("./resources/russian_tales_background.jpeg"); /* W3C */
+  background-image: linear-gradient(135deg, rgba(0,0,0,0), #CCFFCC 60%), url("./resources/russian_tales_background.jpeg"); /* W3C */
 }
 
 .series-link h2 {
-  margin: 0px
+  margin: 0px;
+  margin-top: 30%;
+  margin-bottom: 20px;
+  text-align: right;
 }
 
 .series-link div {
   height: 100%;
   width: 100%;
   padding: 10px;
+  text-align: justify;
 }
 
 .main-header {
   height: 100px;
+}
+
+.navbar-inverse .navbar-brand:focus {
+  background-color: transparent;
+  color: #999999;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus {
+  background-color: transparent;
+  color: #999999;
+  outline: none;
 }
