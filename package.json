@@ -9,7 +9,7 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
-    "react-scrollable-anchor": "^0.6.1"
+    "react-scrollable-anchor": "github:dbramwell/react-scrollable-anchor#release"
   },
   "scripts": {
     "start": "react-scripts start",
