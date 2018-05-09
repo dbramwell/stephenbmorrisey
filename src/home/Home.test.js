@@ -9,24 +9,21 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('home contains Russian Thrillers animation and link', () => {
+it('home contains Russian Thrillers link', () => {
   const home = shallow(<Home />);
   const russianThrillersAnimation = home.find('SeriesLink').first();
-  expect(russianThrillersAnimation.props().animation).toBe('fadeInLeft');
   expect(russianThrillersAnimation.props().header).toBe('The Russian Thrillers');
 });
 
-it('home contains Black Eagle animation and link', () => {
+it('home contains Black Eagle link', () => {
   const home = shallow(<Home />);
   const blackEagleLink = home.find('SeriesLink').at(1);
-  expect(blackEagleLink.props().animation).toBe('fadeInUp');
   expect(blackEagleLink.props().header).toBe('The Black Eagle Trilogy');
 });
 
-it('home contains Russian Tales animation and link', () => {
+it('home contains Russian Tales link', () => {
   const home = shallow(<Home />);
   const russianTalesLink = home.find('SeriesLink').at(2);
-  expect(russianTalesLink.props().animation).toBe('fadeInRight');
   expect(russianTalesLink.props().header).toBe('The Russian Tales');
 });
 

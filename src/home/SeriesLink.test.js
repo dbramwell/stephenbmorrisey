@@ -9,12 +9,6 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('animateIn matches animation prop', () => {
-  const seriesLink = shallow(<SeriesLink animation='my-animation'/>);
-  const animation = seriesLink.find('ScrollAnimation').first();
-  expect(animation.props().animateIn).toBe('my-animation');
-});
-
 it('header matches header prop', () => {
   const seriesLink = shallow(<SeriesLink header='my-header'/>);
   const header = seriesLink.find('h2').first();

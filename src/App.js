@@ -25,6 +25,9 @@ export default class App extends Component {
           <ScrollableAnchor id={'the-black-eagle-trilogy'}>
             <div className='page'></div>
           </ScrollableAnchor>
+          <ScrollableAnchor id={'the-russian-tales'}>
+            <div className='page'></div>
+          </ScrollableAnchor>
         </div>
       </div>
     );

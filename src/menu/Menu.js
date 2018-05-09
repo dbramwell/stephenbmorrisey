@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import Helpers from '../Helpers';
+import helpers from '../Helpers';
 
 export default class Menu extends Component {
-
-  constructor(props) {
-    super(props);
-    this.helpers = new Helpers();
-    
-  }
 
   componentDidMount() {
     window.onhashchange = () => {
@@ -29,7 +23,7 @@ export default class Menu extends Component {
           <Navbar.Collapse>
             <Nav>
               {this.props.navItems.map((header, index) => {
-                const hash = this.helpers.headerToHash(header);
+                const hash = helpers.headerToHash(header);
                 return <NavItem active={window.location.hash.indexOf(hash) > -1} key={index} href={`#${hash}`}>{header}</NavItem>
               })}
             </Nav>

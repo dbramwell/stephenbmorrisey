@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Scriptina';
+  font-style: normal;
+  src: url('./resources/SCRIPTIN.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;

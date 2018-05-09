@@ -21,11 +21,6 @@ it('Navbar text is equal to "Stephen B. Morrisey"', () => {
   expect(header.text()).toBe('Stephen B. Morrisey');
 });
 
-it('Initial hash is home', () => {
-  const menu = shallow(<Menu />);
-  expect(menu.state().hash).toBe('#home');
-});
-
 it('Can add navItems with navItems prop', () => {
   const menu = mount(<Menu navItems={['item1']}/>);
   const item1 = menu.find('nav a').at(1);
