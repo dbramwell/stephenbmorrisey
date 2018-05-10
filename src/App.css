@@ -46,6 +46,7 @@ h1 {
   font-weight: 800;
   text-shadow: 0 0 10px black, 0 0 13px black;
   color: white;
+  z-index: 1;
 }
 
 h2 {
@@ -57,6 +58,38 @@ h2 {
 
 p {
   text-shadow: 0 0 1px #FFFFFF;
+}
+
+.info {
+  width: 70%;
+  display: inline-block;
+}
+
+.links {
+  width: 30%;
+  display: inline-block;
+}
+
+.book-link {
+  background-color: antiquewhite;
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: Scriptina;
+}
+
+.book-link img {
+  height: 50px;
+  margin-right: 10px;
+  margin-left: 20px;
 }
 
 div.page {
@@ -164,13 +197,6 @@ div.page {
   background-image: linear-gradient(135deg, rgba(0,0,0,0), #CCFFCC 60%), url("./resources/russian_tales_background.jpeg"); /* W3C */
 }
 
-/* .react-simple-parallax-bg is generate by the component */
-section .react-simple-parallax-bg {
-  background-image: url("./resources/main_background.jpeg");
-  height: 750px;
-}
-
-section .parallax {
-  top: 200px;
-  margin: auto;
+h2.section-header {
+  font-size: 60px;
 }

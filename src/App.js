@@ -4,6 +4,9 @@ import Menu from './menu/Menu';
 import Home from './home/Home';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { configureAnchors } from 'react-scrollable-anchor';
+import Section from './section/Section';
+import TheRussianThrillers from './content/TheRussianThrillers';
+import helpers from './Helpers';
 
 export default class App extends Component {
 
@@ -14,13 +17,14 @@ export default class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Menu navItems={['The Russian Thrillers', 'The Black Eagle Trilogy', 'The Russian Tales']} />
+        <Menu navItems={[TheRussianThrillers.header, 'The Black Eagle Trilogy', 'The Russian Tales']} />
         <div id='app-content' className='app-content'>
           <ScrollableAnchor id={'home'}>
             <Home />
           </ScrollableAnchor>
-          <ScrollableAnchor id={'the-russian-thrillers'}>
-            <div className='page'></div>
+          <ScrollableAnchor id={helpers.headerToHash(TheRussianThrillers.header)}>
+            <Section
+              content={TheRussianThrillers}/>
           </ScrollableAnchor>
           <ScrollableAnchor id={'the-black-eagle-trilogy'}>
             <div className='page'></div>
