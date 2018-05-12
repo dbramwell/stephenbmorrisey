@@ -40,12 +40,14 @@ export default class Home extends Component {
     ];
 
     return (
-      <div className='page'>
-        <h1>Stephen B. Morrisey</h1>
-        <div className='series-links-container'>
-          <SeriesLink id='thrillers' header='The Russian Thrillers' description={thrillersDesc} />
-          <SeriesLink id='eagle' header='The Black Eagle Trilogy' description={eagleDesc} />
-          <SeriesLink id='tales' header='The Russian Tales' description={talesDesc} />
+      <div className='spacer'>
+        <div className='page'>
+          <h1>Stephen B. Morrisey</h1>
+          <div className='series-links-container'>
+            <SeriesLink id='thrillers' header='The Russian Thrillers' description={thrillersDesc} />
+            <SeriesLink id='eagle' header='The Black Eagle Trilogy' description={eagleDesc} />
+            <SeriesLink id='tales' header='The Russian Tales' description={talesDesc} />
+          </div>
         </div>
       </div>
     )

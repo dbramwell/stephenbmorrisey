@@ -2,6 +2,7 @@ import rigaListImage from '../resources/the_riga_list_front.jpeg'
 import migsImage from '../resources/migs_from_moscow_front.jpeg'
 import samaraImage from '../resources/the_samara_rules_front.jpeg'
 import tashkentImage from '../resources/the_tashkent_trophy_front.jpeg'
+import havanaImage from '../resources/last_stop_havana_front.jpeg'
 
 export default {
   header: 'The Russian Thrillers',
@@ -35,6 +36,11 @@ export default {
       header: 'The Tashkent Trophy',
       image: tashkentImage,
       description: "Several former Soviet athletes have become successful businessmen. Uzbekistan is selling off its vast gas reserves and the world's major companies are bidding for them. A serial killer is assassinating American politicians. The world's top tennis players are playing for the Tashkent Trophy in Tashkent, the capital of Uzbekistan. Jack Kelly returns to Tashkent where he was involved in a deal in the 1990's which he had thought was long forgotten. Who will win the gas reserves and will the killer succeed in his final assassination and shock the world to the core?"
+    },
+    {
+      header: 'Last Stop Havana',
+      image: havanaImage,
+      description: "Jack faces increasing violence, voodoo rituals and a Spanish seductress as he is thrown into a frantic search in Cuba for gold, gold which will radically change the world's political order. Moscow faces its sternest test on the island where actions by Washington and Moscow in the 1960's took the world to the brink of nuclear war. Jack's American past comes under intense scrutiny but how will he finally act as the race for the gold climaxes?"
     }
   ]
 }
