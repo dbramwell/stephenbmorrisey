@@ -8,8 +8,10 @@
     "react-animate-on-scroll": "^2.1.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
     "react-scripts": "1.1.1",
-    "react-scrollable-anchor": "github:dbramwell/react-scrollable-anchor#release"
+    "react-scrollable-anchor": "github:dbramwell/react-scrollable-anchor#release",
+    "redux": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

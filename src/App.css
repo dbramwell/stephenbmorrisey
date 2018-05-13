@@ -213,3 +213,27 @@ h2.section-header {
   border-radius: 20px;
   text-align: justify;
 }
+
+.modal-description {
+  float: left;
+  width: 50%;
+  text-align: justify;
+  padding-right: 10px;
+  text-indent: 20px;
+}
+
+.modal-image {
+  width: 50%;
+  display: inline-block;
+}
+
+.modal-image img {
+  width: 100%;
+}
+
+.modal-title {
+  font-size: 35px;
+  font-family: Scriptina;
+  font-weight: 800;
+  text-shadow: 0 0 3px #FFFFFF, 0 0 5px #000000;
+}
