@@ -12,11 +12,11 @@ class BookModal extends Component {
         <Modal.Title>{this.props.modalData.header}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className='modal-description'>
-          {this.props.modalData.description}
-        </div>
         <div className='modal-image'>
           <img src={this.props.modalData.image} alt={this.props.modalData.header} />
+        </div>
+        <div className='modal-description'>
+          {this.props.modalData.description}
         </div>
       </Modal.Body>
     </Modal>

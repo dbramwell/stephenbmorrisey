@@ -40,8 +40,8 @@
 }
 
 h1 {
-  margin: 20px;
-  font-size: 80px;
+  margin-bottom: 20px;
+  font-size: 45px;
   font-family: Scriptina;
   font-weight: 800;
   text-shadow: 0 0 10px black, 0 0 13px black;
@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 25px;
   font-family: Scriptina;
   font-weight: 800;
   text-shadow: 0 0 3px #FFFFFF, 0 0 5px #000000;
@@ -58,17 +58,18 @@ h2 {
 
 p {
   text-shadow: 0 0 1px #FFFFFF;
-  font-size: 18px;
+  margin: 0;
 }
 
 div.spacer {
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   overflow-x: hidden;
 }
 
 .links {
-  width: 30%;
-  display: inline-block;
+  width: 97%;
+  margin-left: 3%;
+  overflow: hidden;
 }
 
 .book-link {
@@ -76,13 +77,15 @@ div.spacer {
   width: 100%;
   display: block;
   text-align: left;
-  padding: 10px;
+  padding: 2px;
+  padding-top: 10px; 
+  padding-bottom: 10px; 
   margin: 10px;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 800;
   font-family: Scriptina;
 }
@@ -95,35 +98,14 @@ div.spacer {
 
 div.page {
   min-height: 100vh;
-  padding-top: 10px;
-  padding-bottom: 100px;
-  align-items: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  align-content: space-around;
-  flex-direction: column;
   width: 100%;
   overflow-x: hidden;
 }
 
-.series-links-container {
-  width: 100%;
-  flex: 80%;
-  height: 80%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
 .series-link {
-  width: 28%;
   margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 10px;
   background-size: contain;
   border-radius: 5px;
   cursor: pointer;
@@ -148,8 +130,8 @@ div.page {
 
 .series-link h2 {
   margin: 0px;
-  margin-top: 25%;
-  margin-bottom: 25%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .series-link div {
@@ -180,14 +162,14 @@ div.page {
   background-image: linear-gradient(135deg, rgba(0,0,0,0), #CCCCFF 60%), url("./resources/russian_thrillers_background.jpeg"); /* W3C */
 }
 
-.page:nth-child(3) {
+.spacer:nth-child(3) .page {
   background-size: contain;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-image: url("./resources/black_eagle_background.jpeg"); /* fallback */
   background-image: linear-gradient(135deg, rgba(0,0,0,0), #FFCCCC 60%), url("./resources/black_eagle_background.jpeg"); /* W3C */
 }
 
-.page:nth-child(4) {
+.spacer:nth-child(4) .page {
   background-size: contain;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-image: url("./resources/russian_tales_background.jpeg"); /* fallback */
@@ -195,11 +177,8 @@ div.page {
 }
 
 h2.section-header {
-  font-size: 60px;
-}
-
-.section-contents {
-  display: inherit;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .info {
@@ -207,7 +186,7 @@ h2.section-header {
   margin-right: 3%;
   margin-top: auto;
   margin-bottom: auto;
-  width: 64%;
+  width: 94%;
   background-color: rgba(250,235,215, 0.6);
   padding: 20px;
   border-radius: 20px;
@@ -215,25 +194,179 @@ h2.section-header {
 }
 
 .modal-description {
-  float: left;
-  width: 50%;
   text-align: justify;
-  padding-right: 10px;
   text-indent: 20px;
+  font-size: 15px;
 }
 
 .modal-image {
-  width: 50%;
   display: inline-block;
+  float: right;
+  margin-left: 10px;
 }
 
 .modal-image img {
-  width: 100%;
+  max-height: 40vh;
 }
 
 .modal-title {
-  font-size: 35px;
+  font-size: 25px;
   font-family: Scriptina;
   font-weight: 800;
   text-shadow: 0 0 3px #FFFFFF, 0 0 5px #000000;
+}
+
+div.modal {
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  margin: auto;
+  margin-top: 2%;
+  max-width: 96%;
+  max-height: 96%;
+}
+
+.modal-content {
+  min-height: 90vh;
+}
+
+@media only screen and (orientation:landscape) {
+  .series-links-container {
+    width: 100%;
+    flex: 80%;
+    height: 80%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .series-link {
+    width: 28%;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .series-link h2 {
+    margin: 0px;
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+  
+  p {
+    margin-bottom: 10px
+  }
+
+  h2.section-header {
+    margin-bottom: 50px;
+  }
+
+  div.spacer {
+    padding-bottom: 100px;
+  }
+
+  div.page {
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-direction: column;
+    padding-bottom: 100px;
+    padding-top: 10px;
+  }
+
+  .section-contents {
+    display: inherit;
+  }
+
+  .info {
+    width: 64%;
+  }
+
+  .links {
+    width: 60%;
+    display: inline-block;
+  }
+
+  .modal-description {
+    text-align: justify;
+    padding-right: 10px;
+    text-indent: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation:landscape) {
+
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+
+  h2.section-header {
+    font-size: 60px;
+  }
+
+  .modal-title {
+    font-size: 35px;
+  }
+
+  .book-link {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation:portrait) {
+
+  h1 {
+    font-size: 100px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 50px;
+    padding: 20px;
+  }
+  
+  p {
+    font-size: 25px;
+    padding: 20px;
+  }
+
+  h2.section-header {
+    font-size: 80px;
+    padding: 20px;
+  }
+
+  .modal-title {
+    font-size: 50px;
+    padding: 20px;
+  }
+
+  .book-link {
+    font-size: 60px;
+    padding: 20px;
+  }
+
+  .book-link img {
+    height: 120px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .modal-description {
+    font-size: 25px;
+  }
 }

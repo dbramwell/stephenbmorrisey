@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import showModal from '../actions/show_modal'
 import setModalBookDetails from '../actions/set_modal_book_details'
 import {bindActionCreators} from 'redux'
-import BookModal from './BookModal'
 
 class Section extends Component {
 
@@ -40,7 +39,6 @@ class Section extends Component {
               </ScrollAnimation>
             </div>
           </div>
-          <BookModal/>
         </div>
       </div>
     )

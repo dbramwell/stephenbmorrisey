@@ -6,7 +6,11 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import { configureAnchors } from 'react-scrollable-anchor';
 import Section from './section/Section';
 import TheRussianThrillers from './content/TheRussianThrillers';
+import TheRussianTales from './content/TheRussianTales';
+import TheBlackEagleTrilogy from './content/TheBlackEagleTrilogy';
 import helpers from './Helpers';
+import BookModal from './section/BookModal'
+
 
 export default class App extends Component {
 
@@ -17,7 +21,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Menu navItems={[TheRussianThrillers.header, 'The Black Eagle Trilogy', 'The Russian Tales']} />
+        <Menu navItems={[TheRussianThrillers.header, TheBlackEagleTrilogy.header, TheRussianTales.header]} />
         <div id='app-content' className='app-content'>
           <ScrollableAnchor id={'home'}>
             <Home />
@@ -26,12 +30,15 @@ export default class App extends Component {
             <Section
               content={TheRussianThrillers}/>
           </ScrollableAnchor>
-          <ScrollableAnchor id={'the-black-eagle-trilogy'}>
-            <div className='page'></div>
+          <ScrollableAnchor id={helpers.headerToHash(TheBlackEagleTrilogy.header)}>
+            <Section
+              content={TheBlackEagleTrilogy}/>
           </ScrollableAnchor>
-          <ScrollableAnchor id={'the-russian-tales'}>
-            <div className='page'></div>
+          <ScrollableAnchor id={helpers.headerToHash(TheRussianTales.header)}>
+            <Section
+              content={TheRussianTales}/>
           </ScrollableAnchor>
+          <BookModal/>
         </div>
       </div>
     );
