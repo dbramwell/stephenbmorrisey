@@ -1,3 +1,4 @@
+/* global it, expect, describe */
 import setModalBookDetails from './set_modal_book_details'
 
 describe('setModalBookDetails', () => {

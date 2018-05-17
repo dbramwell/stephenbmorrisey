@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import SeriesLink from './SeriesLink';
+import React, { Component } from 'react'
+import SeriesLink from './SeriesLink'
 
 export default class Home extends Component {
-
-  render() {
-
+  render () {
     // const thrillersDesc = [
     //   <p key={1}>Jack Kelly, an ex-banker, who worked in Russia as Communism fell is one of the few people who was involved in the events and actions that have forged the new and powerful Russia.</p>,
     //   <p key={2}>A new Cold War is chilling relations between Russia and the West and MI6, the CIA and even the FSB are falling rapidly behind the pace as Russia’s President is increasingly calling the shots and single-handedly constructing a new world order.</p>,
@@ -25,19 +23,19 @@ export default class Home extends Component {
 
     const thrillersDesc = [
       <p key={1}>The New Cold War</p>,
-      <p key={2}>Jack Kelly is the spy who goes back out into the cold.</p>,
-    ];
+      <p key={2}>Jack Kelly is the spy who goes back out into the cold.</p>
+    ]
 
     const eagleDesc = [
       <p key={1}>A spine chilling revival</p>,
       <p key={2}>An underground battle rages.</p>,
       <p key={3}>A young boy alone has the power to stop it.</p>
-    ];
+    ]
 
     const talesDesc = [
       <p key={1}>Intrigue is at its most intense</p>,
-      <p key={2}>The new Russia is being forged but its past is still very much alive.</p>,
-    ];
+      <p key={2}>The new Russia is being forged but its past is still very much alive.</p>
+    ]
 
     return (
       <div className='spacer'>

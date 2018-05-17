@@ -1,7 +1,7 @@
+/* global it, expect, describe */
 import showModalReducer from './reducer_show_modal'
 
 describe('showModalReducer', () => {
-
   it('should return true when action type is SHOW_MODAL and payload true', () => {
     const action = {
       type: 'SHOW_MODAL',

@@ -25,7 +25,7 @@ export default {
     {
       header: 'MIGs From Moscow',
       image: migsImage,
-      description: "Four Russian MiG fighter jets bought on the black market have gone missing on their way to a German museum and they are somewhere in Eastern Europe. President Bunin is growing increasingly concerned about a major terrorist attack being planned in the southern regions of Russia. Jack Kelly knows the German museum owner from his time in Moscow. Can Jack track him down and find who now has the MiGs and what is their target before the MiGs are launched on their devastating mission?"
+      description: 'Four Russian MiG fighter jets bought on the black market have gone missing on their way to a German museum and they are somewhere in Eastern Europe. President Bunin is growing increasingly concerned about a major terrorist attack being planned in the southern regions of Russia. Jack Kelly knows the German museum owner from his time in Moscow. Can Jack track him down and find who now has the MiGs and what is their target before the MiGs are launched on their devastating mission?'
     },
     {
       header: 'The Samara Rules',

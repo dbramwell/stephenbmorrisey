@@ -1,24 +1,21 @@
-import React, { Component } from 'react';
-import './App.css';
-import Menu from './menu/Menu';
-import Home from './home/Home';
-import ScrollableAnchor from 'react-scrollable-anchor';
-import { configureAnchors } from 'react-scrollable-anchor';
-import Section from './section/Section';
-import TheRussianThrillers from './content/TheRussianThrillers';
-import TheRussianTales from './content/TheRussianTales';
-import TheBlackEagleTrilogy from './content/TheBlackEagleTrilogy';
-import helpers from './Helpers';
+import React, { Component } from 'react'
+import './App.css'
+import Menu from './menu/Menu'
+import Home from './home/Home'
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
+import Section from './section/Section'
+import TheRussianThrillers from './content/TheRussianThrillers'
+import TheRussianTales from './content/TheRussianTales'
+import TheBlackEagleTrilogy from './content/TheBlackEagleTrilogy'
+import helpers from './Helpers'
 import BookModal from './section/BookModal'
 
-
 export default class App extends Component {
-
-  componentWillMount() {
-    configureAnchors({containerId: 'app-content'});
+  componentWillMount () {
+    configureAnchors({containerId: 'app-content'})
   }
-  
-  render() {
+
+  render () {
     return (
       <div className='App'>
         <Menu navItems={[TheRussianThrillers.header, TheBlackEagleTrilogy.header, TheRussianTales.header]} />
@@ -28,19 +25,19 @@ export default class App extends Component {
           </ScrollableAnchor>
           <ScrollableAnchor id={helpers.headerToHash(TheRussianThrillers.header)}>
             <Section
-              content={TheRussianThrillers}/>
+              content={TheRussianThrillers} />
           </ScrollableAnchor>
           <ScrollableAnchor id={helpers.headerToHash(TheBlackEagleTrilogy.header)}>
             <Section
-              content={TheBlackEagleTrilogy}/>
+              content={TheBlackEagleTrilogy} />
           </ScrollableAnchor>
           <ScrollableAnchor id={helpers.headerToHash(TheRussianTales.header)}>
             <Section
-              content={TheRussianTales}/>
+              content={TheRussianTales} />
           </ScrollableAnchor>
-          <BookModal/>
+          <BookModal />
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,3 +1,4 @@
+/* global it, expect, describe */
 import showModal from './show_modal'
 
 describe('showModal', () => {

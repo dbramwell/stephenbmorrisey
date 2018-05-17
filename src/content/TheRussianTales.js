@@ -15,7 +15,7 @@ export default {
     {
       header: 'A Russian Tale',
       image: russianTaleImage,
-      description: "St Petersburg, Russia, 1995. Communism is dead. The new Russia has changed all the rules. To survive everyone now has to make deals. Some people will grab the chance to become incredibly wealthy, but the old Russia will fight back and the unlikeliest of characters will be its heroes. Who will win and who will now be swept away in the latest dawning of the turbulent enigma that is forever Russia?"
+      description: 'St Petersburg, Russia, 1995. Communism is dead. The new Russia has changed all the rules. To survive everyone now has to make deals. Some people will grab the chance to become incredibly wealthy, but the old Russia will fight back and the unlikeliest of characters will be its heroes. Who will win and who will now be swept away in the latest dawning of the turbulent enigma that is forever Russia?'
     }
   ]
 }

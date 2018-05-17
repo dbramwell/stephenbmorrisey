@@ -1,8 +1,7 @@
 class Helpers {
-
-  headerToHash(header) {
-    return header.toLowerCase().replace(/ /g, '-');
+  headerToHash (header) {
+    return header.toLowerCase().replace(/ /g, '-')
   }
 }
 
-export default new Helpers();
+export default new Helpers()

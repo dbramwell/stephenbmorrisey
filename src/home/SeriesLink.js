@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import helpers from '../Helpers';
+import React, { Component } from 'react'
+import helpers from '../Helpers'
 
 export default class SeriesLink extends Component {
-
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
+  constructor (props) {
+    super(props)
+    this.onClick = this.onClick.bind(this)
   }
 
-  onClick() {
-    window.location.hash = helpers.headerToHash(this.props.header);
+  onClick () {
+    window.location.hash = helpers.headerToHash(this.props.header)
   }
 
-  render() {
+  render () {
     return (
       <div className='series-link'>
         <div onClick={this.onClick}>

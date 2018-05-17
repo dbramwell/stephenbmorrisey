@@ -1,7 +1,7 @@
-import modalDataReducer from './reducer_modal_data'
+/* global it, expect, describe */
+import showModalReducer from './reducer_show_modal'
 
 describe('modalDataReducer', () => {
-
   const book = {header: 'header'}
 
   it('should return book when action type is SET_MODAL_BOOK_DETAILS', () => {

@@ -5,5 +5,5 @@ import modalDataReducer from './reducer_modal_data'
 const rootReducer = combineReducers({
   showModal: showModalReducer,
   modalData: modalDataReducer
-});
-export default rootReducer;
+})
+export default rootReducer
