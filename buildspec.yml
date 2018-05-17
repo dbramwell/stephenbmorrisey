@@ -8,4 +8,4 @@ phases:
     commands:
       - CI=true npm test
       - npm run build
-      - aws s3 sync --delete build/ "s3://www.stephenbmorrisey.com"
+      - ./node_modules/.bin/sls s3deploy
