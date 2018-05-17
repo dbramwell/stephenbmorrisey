@@ -8,6 +8,4 @@ phases:
     commands:
       - CI=true npm test
       - npm run build
-  post_build:
-    commands:
-      - sls s3deploy
+      - ./node_modules/.bin/sls s3deploy
