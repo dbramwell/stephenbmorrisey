@@ -6,7 +6,7 @@ phases:
       - npm install
   build:
     commands:
-      - npm test
+      - CI=true npm test
       - npm run build
   post_build:
     commands:
