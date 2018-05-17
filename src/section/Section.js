@@ -1,21 +1,7 @@
 import React, { Component } from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
-import {connect} from 'react-redux'
-import showModal from '../actions/show_modal'
-import setModalBookDetails from '../actions/set_modal_book_details'
-import {bindActionCreators} from 'redux'
+import BookLinksAnimation from './BookLinksAnimation';
 
 class Section extends Component {
-
-  constructor(props) {
-    super(props)
-    this.showModal = this.showModal.bind(this)
-  }
-
-  showModal(book) {
-    this.props.setModalBookDetails(book)
-    this.props.showModal(true)
-  }
 
   render() {
     return (
@@ -29,14 +15,7 @@ class Section extends Component {
               })}
             </div>
             <div className='links'>
-              <ScrollAnimation offset={0} animateIn={'fadeInRight'} scrollableParentSelector='#app-content'>
-                {this.props.content.books.map((book, index) => {
-                  return <div key={index} className='book-link' onClick={() => this.showModal(book)}>
-                    <img src={book.image} alt={book.header} />
-                    {book.header}
-                  </div>
-                })}
-              </ScrollAnimation>
+              <BookLinksAnimation books={this.props.content.books}/>
             </div>
           </div>
         </div>
@@ -45,15 +24,4 @@ class Section extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {}
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    showModal,
-    setModalBookDetails
-  }, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Section)
+export default Section

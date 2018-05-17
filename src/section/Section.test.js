@@ -1,29 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Section from './Section';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
+import TheRussianTales from '../content/TheRussianTales';
+import configureStore from 'redux-mock-store'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Section />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
 
-it('header matches header prop', () => {
-  const section = shallow(<Section header='my-header' links={}/>);
+const initialState = {}
+const mockStore = configureStore()
+let store
+
+beforeEach(() => {
+  store = mockStore(initialState)
+})
+
+it('header matches content header', () => {
+  const section = shallow(<Section store={store} content={TheRussianTales} />);
   const header = section.find('h2').first();
-  expect(header.text()).toBe('my-header');
+  expect(header.text()).toBe(TheRussianTales.header);
 });
 
 it('contains div.info and div.links', () => {
-  const section = shallow(<Section header='My Header' links={}/>);
+  const section = shallow(<Section store={store} content={TheRussianTales} />);
   expect(section.find('div.info').length).toBe(1);
   expect(section.find('div.links').length).toBe(1);
 });
 
-it('p matches description prop', () => {
-  const section = shallow(<Section links={} description={<p>this is some stuff</p>}/>);
-  const p = section.find('p').first();
-  expect(p.text()).toBe('this is some stuff');
+it('p matches content description', () => {
+  const section = shallow(<Section store={store} content={TheRussianTales} />);
+  var pIndex = 0;
+  TheRussianTales.description.forEach (() => {
+    const p = section.find('p').at(pIndex);
+    expect(p.text()).toBe(TheRussianTales.description[pIndex]);
+    pIndex++
+  })
 });
 
