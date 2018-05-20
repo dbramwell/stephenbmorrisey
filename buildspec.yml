@@ -10,3 +10,4 @@ phases:
       - npm test
       - npm run build
       - ./node_modules/.bin/sls s3deploy
+      - ./node_modules/.bin/sls deploy
