@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "lint": "./node_modules/.bin/standard",
-    "install": "cd client && npm install",
+    "install-client": "cd client && npm install",
     "test-services": "jest services",
     "test-shared": "jest shared",
     "test": "npm run test-services && npm run test-shared && cd client && CI=true npm test",
