@@ -7,6 +7,6 @@ phases:
   build:
     commands:
       - npm run lint
-      - CI=true npm test
+      - npm test
       - npm run build
       - ./node_modules/.bin/sls s3deploy
