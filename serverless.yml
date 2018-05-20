@@ -2,8 +2,20 @@ service: stephenbmorrisey
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
   memorySize: 128
+  environment:
+    DYNAMODB_TABLE: ${self:service}-emailsTable-${self:provider.stage}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
 plugins:
 - serverless-s3-deploy
@@ -13,5 +25,36 @@ custom:
     targets:
       - bucket: www.stephenbmorrisey.com
         files:
-          - source: build/
+          - source: client/build/
             globs: "**/*"
+
+functions:
+  signUp:
+    handler: services/signUpService.signUp
+    name: ${self:service}-signUp-${self:provider.stage}
+    description: Add email to dynamoDB, ready for confirmation
+    events:
+      - http:
+          method: post
+          path: signUp
+          cors: true
+
+package:
+  exclude:
+    - client/**
+
+resources:
+  Resources:
+    emailsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}
+        AttributeDefinitions:
+          - AttributeName: email
+            AttributeType: S
+        KeySchema:
+          - AttributeName: email
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

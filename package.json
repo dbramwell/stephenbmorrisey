@@ -4,15 +4,17 @@
   "scripts": {
     "lint": "./node_modules/.bin/standard",
     "install": "cd client && npm install",
-    "test": "cd client && CI=true npm test",
+    "test-services": "jest services",
+    "test-shared": "jest shared",
+    "test": "npm run test-services && npm run test-shared && cd client && CI=true npm test",
     "build": "cd client && npm run build"
-
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dbramwell/stephenbmorrisey.git"
   },
   "devDependencies": {
+    "jest": "^22.4.4",
     "serverless": "^1.27.2",
     "serverless-s3-deploy": "^0.5.0",
     "standard": "^11.0.1"
