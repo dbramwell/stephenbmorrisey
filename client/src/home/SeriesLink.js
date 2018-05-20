@@ -16,7 +16,9 @@ export default class SeriesLink extends Component {
       <div className='series-link'>
         <div onClick={this.onClick}>
           <h2>{this.props.header}</h2>
-          {this.props.description}
+          {this.props.description.map((desc, index) => {
+            return <p key={index}>{desc}</p>
+          })}
         </div>
       </div>
     )
