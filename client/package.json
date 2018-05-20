@@ -1,5 +1,5 @@
 {
-  "name": "stephenbmorrisey",
+  "name": "stephenbmorrisey-gui",
   "dependencies": {
     "animate.css": "^3.6.1",
     "react": "^16.2.0",

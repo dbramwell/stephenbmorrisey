@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - npm install
+      - cd client && npm install
   build:
     commands:
       - npm run lint
