@@ -6,7 +6,7 @@ import { shallow } from 'enzyme'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<SeriesLink description={['this is some stuff']}/>, div)
+  ReactDOM.render(<SeriesLink description={['this is some stuff']} />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 

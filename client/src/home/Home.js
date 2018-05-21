@@ -6,7 +6,6 @@ import TheBlackEagleTrilogy from '../content/TheBlackEagleTrilogy'
 
 export default class Home extends Component {
   render () {
-
     return (
       <div className='spacer'>
         <div className='page'>
@@ -14,7 +13,7 @@ export default class Home extends Component {
           <div className='series-links-container'>
             <SeriesLink id='thrillers' header={TheRussianThrillers.header} description={TheRussianThrillers.summary} />
             <SeriesLink id='eagle' header={TheBlackEagleTrilogy.header} description={TheBlackEagleTrilogy.summary} />
-            <SeriesLink id='tales' header={TheRussianTales.header} description={TheRussianTales.summary}/>
+            <SeriesLink id='tales' header={TheRussianTales.header} description={TheRussianTales.summary} />
           </div>
         </div>
       </div>

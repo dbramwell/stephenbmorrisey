@@ -3,24 +3,22 @@ import { FormGroup, FormControl, Button } from 'react-bootstrap'
 import emailValidator from '../shared/validators/emailValidator'
 
 export default class SignUpPage extends Component {
-
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {email: ''}
     this.handleChange = this.handleChange.bind(this)
   }
 
-  getValidationState() {
+  getValidationState () {
     const validEmail = emailValidator(this.state.email)
-    return validEmail ? 'success' : 'error';
+    return validEmail ? 'success' : 'error'
   }
-  
-  handleChange(e) {
-    this.setState({ email: e.target.value });
-  }
-  
-  render () {
 
+  handleChange (e) {
+    this.setState({ email: e.target.value })
+  }
+
+  render () {
     return (
       <div className='spacer'>
         <div className='page'>
@@ -29,20 +27,20 @@ export default class SignUpPage extends Component {
             <p>If you would like to receive information regarding upcoming releases from Stephen B. Morrisey, submit your email address below:</p>
             <form>
               <FormGroup
-                controlId="formBasicText"
+                controlId='formBasicText'
                 validationState={this.getValidationState()}
               >
                 <FormControl
-                  type="text"
+                  type='text'
                   value={this.state.email}
-                  placeholder="example@email.com"
+                  placeholder='example@email.com'
                   onChange={this.handleChange}
                 />
                 <FormControl.Feedback />
-                <Button type="submit">Submit</Button>
+                <Button type='submit'>Submit</Button>
               </FormGroup>
             </form>
-          </div>  
+          </div>
         </div>
       </div>
     )
