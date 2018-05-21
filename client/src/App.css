@@ -5,6 +5,10 @@
   overflow-x: hidden;
 }
 
+nav div.container {
+  width: auto;
+}
+
 .app-content {
   overflow-x: hidden;
   position: fixed;
@@ -176,6 +180,13 @@ div.page {
   background-image: linear-gradient(135deg, rgba(0,0,0,0), #CCFFCC 60%), url("./resources/russian_tales_background.jpeg"); /* W3C */
 }
 
+.spacer:nth-child(5) .page {
+  background-size: contain;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-image: url("./resources/newsletter.jpeg"); /* fallback */
+  background-image: linear-gradient(135deg, rgba(0,0,0,0), #FFFFCC 60%), url("./resources/newsletter.jpeg"); /* W3C */
+}
+
 h2.section-header {
   font-size: 40px;
   margin-bottom: 20px;
@@ -207,6 +218,10 @@ h2.section-header {
 
 .modal-image img {
   max-height: 40vh;
+}
+
+.centered {
+  text-align: center;
 }
 
 .modal-title {

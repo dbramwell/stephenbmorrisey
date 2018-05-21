@@ -9,6 +9,7 @@ import TheRussianTales from './content/TheRussianTales'
 import TheBlackEagleTrilogy from './content/TheBlackEagleTrilogy'
 import helpers from './Helpers'
 import BookModal from './section/BookModal'
+import SignUpPage from './signUp/SignUpPage'
 
 export default class App extends Component {
   componentWillMount () {
@@ -34,6 +35,9 @@ export default class App extends Component {
           <ScrollableAnchor id={helpers.headerToHash(TheRussianTales.header)}>
             <Section
               content={TheRussianTales} />
+          </ScrollableAnchor>
+          <ScrollableAnchor id={'signUp'}>
+            <SignUpPage />
           </ScrollableAnchor>
           <BookModal />
         </div>

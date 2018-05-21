@@ -26,6 +26,9 @@ export default class Menu extends Component {
                 return <NavItem active={window.location.hash.indexOf(hash) > -1} key={index} href={`#${hash}`}>{header}</NavItem>
               })}
             </Nav>
+            <Nav pullRight>
+              <NavItem active={window.location.hash.indexOf('signUp') > -1} href={'#signUp'}>Sign Up</NavItem>
+            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>
