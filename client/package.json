@@ -12,10 +12,12 @@
     "redux": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run linkShared; react-scripts start",
+    "build": "npm run copyShared; react-scripts build; npm run linkShared",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "linkShared": "rm -rf src/shared; ln -s ../../shared src/shared",
+    "copyShared": "rm -rf src/shared; cp -r ../shared src"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
