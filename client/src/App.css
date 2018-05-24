@@ -71,27 +71,26 @@ div.spacer {
 }
 
 .links {
-  width: 97%;
   margin-left: 3%;
+  margin-right: 3%;
   overflow: hidden;
 }
 
 .book-link {
   background-color: antiquewhite;
-  width: 100%;
   display: block;
   text-align: left;
   padding: 2px;
   padding-top: 10px; 
   padding-bottom: 10px; 
   margin: 10px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 800;
   font-family: Scriptina;
+  border-color: #AAAAAA;
+  border-style: solid;
 }
 
 .book-link img {
@@ -113,8 +112,9 @@ div.page {
   background-size: contain;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+  border-style: solid;
+  border-color: #AAAAAA;
 }
 
 .series-link:nth-child(1) {
@@ -160,31 +160,19 @@ div.page {
 }
 
 .spacer:nth-child(2) .page {
-  background-size: contain;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-image: url("./resources/russian_thrillers_background.jpeg"); /* fallback */
-  background-image: linear-gradient(135deg, rgba(0,0,0,0), #CCCCFF 60%), url("./resources/russian_thrillers_background.jpeg"); /* W3C */
+  background-color: rgba(204, 204, 255, 0.8)
 }
 
 .spacer:nth-child(3) .page {
-  background-size: contain;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-image: url("./resources/black_eagle_background.jpeg"); /* fallback */
-  background-image: linear-gradient(135deg, rgba(0,0,0,0), #FFCCCC 60%), url("./resources/black_eagle_background.jpeg"); /* W3C */
+  background-color: rgba(255, 204, 204, 0.8)
 }
 
 .spacer:nth-child(4) .page {
-  background-size: contain;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-image: url("./resources/russian_tales_background.jpeg"); /* fallback */
-  background-image: linear-gradient(135deg, rgba(0,0,0,0), #CCFFCC 60%), url("./resources/russian_tales_background.jpeg"); /* W3C */
+  background-color: rgba(204, 255, 204, 0.8)
 }
 
 .spacer:nth-child(5) .page {
-  background-size: contain;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-image: url("./resources/newsletter.jpeg"); /* fallback */
-  background-image: linear-gradient(135deg, rgba(0,0,0,0), #FFFFCC 60%), url("./resources/newsletter.jpeg"); /* W3C */
+  background-color: rgba(255, 255, 204, 0.8)
 }
 
 h2.section-header {
@@ -202,6 +190,8 @@ h2.section-header {
   padding: 20px;
   border-radius: 20px;
   text-align: justify;
+  border-color: #AAAAAA;
+  border-style: solid;
 }
 
 .modal-description {
@@ -258,6 +248,13 @@ div.modal {
     display: flex;
   }
 
+  .book-link {
+    width: 100%;
+    border-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
   .series-link {
     width: 28%;
     margin-right: 0;
@@ -307,6 +304,7 @@ div.modal {
   .links {
     width: 60%;
     display: inline-block;
+    margin-right: 0;
   }
 
   .modal-description {
