@@ -1,5 +1,5 @@
 /* global jest, it, expect, describe, beforeEach */
-const Emails = require('./emails')
+const EmailsStore = require('./emailsStore')
 
 describe('emails', () => {
   var emails
@@ -12,7 +12,7 @@ describe('emails', () => {
       put: jest.fn().mockImplementation(() => { return {promise: jest.fn()} }),
       get: jest.fn().mockImplementation(() => { return {promise: jest.fn()} })
     }
-    emails = new Emails(db)
+    emails = new EmailsStore(db)
   })
 
   it('addEmail should call try to add email to the DB with uid and confirmed set to false', () => {
