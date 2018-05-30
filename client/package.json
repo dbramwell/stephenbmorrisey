@@ -2,13 +2,14 @@
   "name": "stephenbmorrisey-gui",
   "dependencies": {
     "animate.css": "^3.6.1",
+    "query-string": "^6.1.0",
     "react": "^16.2.0",
     "react-animate-on-scroll": "^2.1.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.1",
-    "react-scrollable-anchor": "github:dbramwell/react-scrollable-anchor#release",
+    "react-toastify": "^4.0.1",
     "redux": "^4.0.0"
   },
   "scripts": {

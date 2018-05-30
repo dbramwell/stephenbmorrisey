@@ -46,7 +46,7 @@ nav div.container {
 h1 {
   margin-bottom: 20px;
   font-size: 45px;
-  font-family: Scriptina;
+  font-family: scriptinaregular;
   font-weight: 800;
   text-shadow: 0 0 10px black, 0 0 13px black;
   color: white;
@@ -55,7 +55,7 @@ h1 {
 
 h2 {
   font-size: 25px;
-  font-family: Scriptina;
+  font-family: scriptinaregular;
   font-weight: 800;
   text-shadow: 0 0 3px #FFFFFF, 0 0 5px #000000;
 }
@@ -71,8 +71,8 @@ div.spacer {
 }
 
 .links {
-  margin-left: 3%;
-  margin-right: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
   overflow: hidden;
 }
 
@@ -88,7 +88,7 @@ div.spacer {
   cursor: pointer;
   font-size: 20px;
   font-weight: 800;
-  font-family: Scriptina;
+  font-family: scriptinaregular;
   border-color: #AAAAAA;
   border-style: solid;
 }
@@ -216,7 +216,7 @@ h2.section-header {
 
 .modal-title {
   font-size: 25px;
-  font-family: Scriptina;
+  font-family: scriptinaregular;
   font-weight: 800;
   text-shadow: 0 0 3px #FFFFFF, 0 0 5px #000000;
 }
@@ -304,7 +304,9 @@ div.modal {
   .links {
     width: 60%;
     display: inline-block;
-    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 3%;
   }
 
   .modal-description {

@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import { FormGroup, FormControl, Button } from 'react-bootstrap'
 import emailValidator from '../shared/validators/emailValidator'
+import postEmail from '../actions/post_email'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 
-export default class SignUpPage extends Component {
+class SignUpPage extends Component {
   constructor (props) {
     super(props)
     this.state = {email: ''}
     this.handleChange = this.handleChange.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   getValidationState () {
@@ -18,6 +22,13 @@ export default class SignUpPage extends Component {
     this.setState({ email: e.target.value })
   }
 
+  onSubmit (e) {
+    e.preventDefault()
+    console.log('posting')
+    this.props.postEmail(e.target.elements.email.value)
+    console.log('posted')
+  }
+
   render () {
     return (
       <div className='spacer'>
@@ -25,19 +36,21 @@ export default class SignUpPage extends Component {
           <h2 className='section-header'>Sign up for the Newsletter</h2>
           <div className='info centered'>
             <p>If you would like to receive information regarding upcoming releases from Stephen B. Morrisey, submit your email address below:</p>
-            <form>
+            <form onSubmit={this.onSubmit}>
               <FormGroup
                 controlId='formBasicText'
                 validationState={this.getValidationState()}
               >
                 <FormControl
                   type='text'
+                  name="email"
                   value={this.state.email}
                   placeholder='example@email.com'
                   onChange={this.handleChange}
                 />
                 <FormControl.Feedback />
-                <Button type='submit'>Submit</Button>
+                <br/>
+                <Button disabled={this.getValidationState() === 'error'} type='submit'>Submit</Button>
               </FormGroup>
             </form>
           </div>
@@ -46,3 +59,15 @@ export default class SignUpPage extends Component {
     )
   }
 }
+
+const mapStateToProps = state => {
+  return {}
+}
+
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({
+    postEmail
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUpPage)

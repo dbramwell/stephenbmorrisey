@@ -10,10 +10,22 @@ import TheBlackEagleTrilogy from './content/TheBlackEagleTrilogy'
 import helpers from './Helpers'
 import BookModal from './section/BookModal'
 import SignUpPage from './signUp/SignUpPage'
+import { ToastContainer } from 'react-toastify'
+import queryString from 'query-string'
+import validateEmail from './actions/validate_email'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 
-export default class App extends Component {
+class App extends Component {
   componentWillMount () {
     configureAnchors({containerId: 'app-content'})
+  }
+
+  componentDidMount () {
+    const queryParams = queryString.parse(window.location.search);
+    if (queryParams.emailUid) {
+      this.props.validateEmail(queryParams.emailUid)
+    }
   }
 
   render () {
@@ -41,7 +53,20 @@ export default class App extends Component {
           </ScrollableAnchor>
           <BookModal />
         </div>
+        <ToastContainer />
       </div>
     )
   }
 }
+
+const mapStateToProps = state => {
+  return {}
+}
+
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({
+    validateEmail
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
