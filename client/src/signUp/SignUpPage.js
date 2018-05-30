@@ -24,9 +24,7 @@ class SignUpPage extends Component {
 
   onSubmit (e) {
     e.preventDefault()
-    console.log('posting')
     this.props.postEmail(e.target.elements.email.value)
-    console.log('posted')
   }
 
   render () {

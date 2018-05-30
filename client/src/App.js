@@ -33,7 +33,7 @@ class App extends Component {
       <div className='App'>
         <Menu navItems={[TheRussianThrillers.header, TheBlackEagleTrilogy.header, TheRussianTales.header]} />
         <div id='app-content' className='app-content'>
-          <ScrollableAnchor id='home'>
+          <ScrollableAnchor id={'home'}>
             <Home />
           </ScrollableAnchor>
           <ScrollableAnchor id={helpers.headerToHash(TheRussianThrillers.header)}>
@@ -48,7 +48,7 @@ class App extends Component {
             <Section
               content={TheRussianTales} />
           </ScrollableAnchor>
-          <ScrollableAnchor id='signUp'>
+          <ScrollableAnchor id={'signUp'}>
             <SignUpPage />
           </ScrollableAnchor>
           <BookModal />
