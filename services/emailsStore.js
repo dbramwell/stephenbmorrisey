@@ -6,13 +6,13 @@ class EmailsStore {
   getEmailByUid (uid) {
     var params = {
       TableName: process.env.DYNAMODB_TABLE,
-      ProjectionExpression: "email",
-      FilterExpression: "#uid = :uid",
+      ProjectionExpression: 'email',
+      FilterExpression: '#uid = :uid',
       ExpressionAttributeNames: {
-          "#uid": "uid"
+        '#uid': 'uid'
       },
       ExpressionAttributeValues: {
-           ":uid": uid
+        ':uid': uid
       }
     }
     return this.db.scan(params).promise()
@@ -25,13 +25,13 @@ class EmailsStore {
         email
       },
       ExpressionAttributeNames: {
-        '#confirmed': 'confirmed',
+        '#confirmed': 'confirmed'
       },
       ExpressionAttributeValues: {
         ':confirmed': true
       },
       UpdateExpression: 'SET #confirmed = :confirmed',
-      ReturnValues: 'ALL_NEW',
+      ReturnValues: 'ALL_NEW'
     }
     return this.db.update(params).promise()
   }

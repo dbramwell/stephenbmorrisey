@@ -8,10 +8,10 @@ const updateToast = (type, message, id) => {
       render: message,
       type,
       autoClose: 5000
-     });
+    })
 }
 
-export default function* validateEmailToAPISaga(action) {
+export default function * validateEmailToAPISaga (action) {
   const inProgressToast = toast.warn('Confirming your email. Please wait.',
     {
       position: toast.POSITION.TOP_CENTER,

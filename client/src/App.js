@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   componentDidMount () {
-    const queryParams = queryString.parse(window.location.search);
+    const queryParams = queryString.parse(window.location.search)
     if (queryParams.emailUid) {
       this.props.validateEmail(queryParams.emailUid)
     }

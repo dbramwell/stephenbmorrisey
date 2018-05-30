@@ -9,8 +9,8 @@ describe('emails', () => {
 
   beforeEach(() => {
     const db = {
-      put: jest.fn().mockImplementation(() => {return {promise: jest.fn()}}),
-      get: jest.fn().mockImplementation(() => {return {promise: jest.fn()}})
+      put: jest.fn().mockImplementation(() => { return {promise: jest.fn()} }),
+      get: jest.fn().mockImplementation(() => { return {promise: jest.fn()} })
     }
     emails = new Emails(db)
   })

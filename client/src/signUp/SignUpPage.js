@@ -43,13 +43,13 @@ class SignUpPage extends Component {
               >
                 <FormControl
                   type='text'
-                  name="email"
+                  name='email'
                   value={this.state.email}
                   placeholder='example@email.com'
                   onChange={this.handleChange}
                 />
                 <FormControl.Feedback />
-                <br/>
+                <br />
                 <Button disabled={this.getValidationState() === 'error'} type='submit'>Submit</Button>
               </FormGroup>
             </form>

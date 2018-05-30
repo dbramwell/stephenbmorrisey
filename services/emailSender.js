@@ -1,12 +1,11 @@
-const aws = require("aws-sdk")
-const nodemailer = require("nodemailer")
+const aws = require('aws-sdk')
+const nodemailer = require('nodemailer')
 
 const ses = new aws.SES()
-const from = "no_reply@stephenbmorrisey.com"
-const subject = "Newsletter Confirmation"
+const from = 'no_reply@stephenbmorrisey.com'
+const subject = 'Newsletter Confirmation'
 
 class EmailSender {
-
   sendEmail (email, uid) {
     const mailOptions = {
       from,
@@ -25,7 +24,6 @@ class EmailSender {
 
     return transporter.sendMail(mailOptions)
   }
-
 }
 
 module.exports = EmailSender

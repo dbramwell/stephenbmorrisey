@@ -8,10 +8,10 @@ const updateToast = (type, message, id) => {
       render: message,
       type,
       autoClose: 5000
-     });
+    })
 }
 
-export default function* postEmailToAPISaga(action) {
+export default function * postEmailToAPISaga (action) {
   const inProgressToast = toast.warn('Signing you up. Please wait.',
     {
       position: toast.POSITION.BOTTOM_CENTER,
