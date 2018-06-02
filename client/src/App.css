@@ -236,7 +236,7 @@ div.modal {
   min-height: 90vh;
 }
 
-@media only screen and (orientation:landscape) {
+@media only screen and (min-aspect-ratio: 13/9) {
   .series-links-container {
     width: 100%;
     flex: 80%;
@@ -316,7 +316,7 @@ div.modal {
   }
 }
 
-@media only screen and (min-width: 768px) and (orientation:landscape) {
+@media only screen and (min-width: 768px) and (min-aspect-ratio: 13/9) {
 
   h1 {
     font-size: 80px;
@@ -343,7 +343,7 @@ div.modal {
   }
 }
 
-@media only screen and (min-width: 768px) and (orientation:portrait) {
+@media only screen and (min-width: 768px) and (max-aspect-ratio: 13/9) {
 
   h1 {
     font-size: 100px;
